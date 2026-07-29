@@ -1,9 +1,9 @@
 <?php
 	session_start();
     include "connect.php";
-    include "Includes/templates/header.php";
-    include "Includes/templates/navbar.php";
-	include "Includes/functions/functions.php";
+    include "includes/templates/header.php";
+    include "includes/templates/navbar.php";
+	include "includes/functions/functions.php";
 
 	if (isset($_POST['reserve_car']) && $_SERVER['REQUEST_METHOD'] === 'POST')
 	{
@@ -247,7 +247,7 @@ new Vue({
 
 <!-- FOOTER BOTTOM -->
 
-<?php include "Includes/templates/footer.php"; ?>
+<?php include "includes/templates/footer.php"; ?>
 
 
 <script>

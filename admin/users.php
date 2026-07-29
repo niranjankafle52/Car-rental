@@ -6,8 +6,8 @@
 
     //Includes
     include 'connect.php';
-    include 'Includes/functions/functions.php'; 
-    include 'Includes/templates/header.php';
+    include 'includes/functions/functions.php'; 
+    include 'includes/templates/header.php';
 
     //Check If user is already logged in
     if(isset($_SESSION['username_yahya_car_rental']) && isset($_SESSION['password_yahya_car_rental']))
@@ -78,7 +78,7 @@
 <?php 
         
         //Include Footer
-        include 'Includes/templates/footer.php';
+        include 'includes/templates/footer.php';
     }
     else
     {

@@ -6,8 +6,8 @@ $pageTitle = 'Cars';
 
 //Includes
 include 'connect.php';
-include 'Includes/functions/functions.php'; 
-include 'Includes/templates/header.php';
+include 'includes/functions/functions.php'; 
+include 'includes/templates/header.php';
 
 //Check If user is already logged in
 if (isset($_SESSION['username_car_rental']) && isset($_SESSION['password_car_rental'])) {
@@ -180,7 +180,7 @@ if (isset($_SESSION['username_car_rental']) && isset($_SESSION['password_car_ren
 </div>
 
 <?php
-    include 'Includes/templates/footer.php';
+    include 'includes/templates/footer.php';
 } else {
     header('Location: index.php');
     exit();

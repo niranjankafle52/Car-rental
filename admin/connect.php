@@ -1,5 +1,5 @@
 <?php
-    $dsn = 'mysql:host=localhost;dbname=car_rental';
+    $dsn = 'mysql:host=localhost;dbname=carrental';
 	$user = 'root';
 	$pass = '';
 	$option = array(
