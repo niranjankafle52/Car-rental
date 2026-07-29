@@ -83,3 +83,5 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
     </div>
   </div>
 </footer>
+
+<?php include(__DIR__ . '/chatbot-widget.php'); ?>

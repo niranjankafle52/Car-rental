@@ -1,0 +1,1163 @@
+/* ==========================================================================
+   Car Rental Portal — "Modern Automotive Dark Editorial"
+   New theme stylesheet. Loaded AFTER bootstrap.min.css / style.css so it can
+   cleanly override the legacy 2017 "carforyou" skin. No template markup or
+   PHP logic was touched to build this file — it works entirely through the
+   existing class names already present in the page templates.
+   ========================================================================== */
+
+:root {
+  --ink: #0B0D10;
+  --ink-2: #14171C;
+  --ink-3: #1B1F26;
+  --cream: #F7F5F2;
+  --cream-2: #EFEBE4;
+  --paper: #FFFFFF;
+  --amber: #E8A33D;
+  --amber-2: #F5A623;
+  --amber-ink: #1A1200;
+  --gray-900: #1E1D1B;
+  --gray-700: #514E48;
+  --gray-500: #83807A;
+  --gray-300: #C9C5BC;
+  --gray-100: #E9E5DD;
+  --line-dark: rgba(247, 245, 242, 0.12);
+  --line-light: rgba(20, 20, 18, 0.1);
+  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 2px 10px rgba(11, 13, 16, 0.06);
+  --shadow-card: 0 18px 40px -16px rgba(11, 13, 16, 0.35);
+  --shadow-lift: 0 26px 60px -18px rgba(232, 163, 61, 0.35), 0 18px 40px -20px rgba(11, 13, 16, 0.55);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 0.45s;
+}
+
+/* --------------------------------------------------------------------
+   0. Reset / base
+   -------------------------------------------------------------------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray-900);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+a { transition: color 0.25s var(--ease), background-color 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.25s var(--ease); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+::selection { background: var(--amber); color: var(--amber-ink); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--amber); }
+
+.gray-bg { background: var(--paper) !important; }
+
+hr, .divider { border-color: var(--line-light); }
+
+/* Scroll reveal ---------------------------------------------------------
+   Hidden state is scoped to html.js-anim (set by a tiny synchronous inline
+   script in <head>). If JS is blocked or fails, html.js-anim is never
+   added, so .reveal content is simply visible by default — content never
+   depends on JS/IntersectionObserver to exist on the page. */
+.reveal {
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  will-change: opacity, transform;
+}
+html.js-anim .reveal { opacity: 0; transform: translateY(28px); }
+html.js-anim .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+.col-list-3.reveal:nth-child(2), .grid_listing.reveal:nth-child(2) { transition-delay: 0.08s; }
+.col-list-3.reveal:nth-child(3), .grid_listing.reveal:nth-child(3) { transition-delay: 0.16s; }
+.col-list-3.reveal:nth-child(4) { transition-delay: 0.24s; }
+.col-list-3.reveal:nth-child(5) { transition-delay: 0.32s; }
+.col-list-3.reveal:nth-child(6) { transition-delay: 0.4s; }
+.col-list-3.reveal:nth-child(7) { transition-delay: 0.48s; }
+.col-list-3.reveal:nth-child(8) { transition-delay: 0.56s; }
+.col-list-3.reveal:nth-child(9) { transition-delay: 0.64s; }
+.product-listing-m.reveal { transition-delay: calc(var(--row, 0) * 0.05s); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+/* --------------------------------------------------------------------
+   1. Buttons
+   -------------------------------------------------------------------- */
+.btn {
+  font-family: var(--font-display);
+  background: var(--amber);
+  color: var(--amber-ink);
+  border: 1px solid var(--amber);
+  border-radius: var(--radius-sm);
+  padding: 13px 26px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: none;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.btn:hover, .btn:focus {
+  background: var(--amber-2);
+  color: var(--amber-ink);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -10px rgba(232, 163, 61, 0.55);
+}
+.btn:active { transform: translateY(-1px); }
+.btn.outline {
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--line-dark);
+}
+.btn.outline:hover, .btn.outline:focus {
+  background: var(--amber);
+  color: var(--amber-ink);
+  border-color: var(--amber);
+}
+.btn.btn-xs { padding: 8px 16px; font-size: 11px; }
+.btn-block { width: 100%; text-align: center; }
+.btn-primary, .btn-light, .btn-warning {
+  font-family: var(--font-display);
+  background: var(--amber) !important;
+  border-color: var(--amber) !important;
+  color: var(--amber-ink) !important;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 13px;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.btn-primary:hover, .btn-light:hover, .btn-warning:hover {
+  background: var(--amber-2) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -10px rgba(232, 163, 61, 0.5);
+}
+
+/* --------------------------------------------------------------------
+   2. Header
+   -------------------------------------------------------------------- */
+.default-header {
+  background: var(--ink);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-dark);
+}
+.default-header .logo { padding: 6px 0; }
+.default-header .logo img { height: 38px; width: auto; display: block; }
+.header_widgets { color: rgba(247, 245, 242, 0.55); }
+.header_widgets .circle_icon {
+  background: transparent;
+  border: 1px solid var(--line-dark);
+  color: var(--amber);
+}
+.header_widgets p.uppercase_text { color: rgba(247, 245, 242, 0.4); }
+.header_widgets a { color: var(--cream); font-family: var(--font-display); }
+.header_widgets a:hover { color: var(--amber); }
+.login_btn .btn { padding: 10px 22px; }
+
+#navigation_bar {
+  background: var(--ink-2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border: none;
+  border-bottom: 1px solid var(--line-dark);
+  margin: 0;
+  transition: box-shadow 0.35s var(--ease), padding 0.35s var(--ease);
+  padding: 2px 0;
+}
+#navigation_bar.is-scrolled {
+  box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.7);
+}
+.navbar-default .navbar-nav > li > a {
+  color: rgba(247, 245, 242, 0.72);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 22px 18px;
+  position: relative;
+}
+.navbar-default .navbar-nav > li > a::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 14px;
+  height: 2px;
+  background: var(--amber);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.navbar-default .navbar-nav > li:hover > a,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: var(--cream);
+  background: transparent;
+}
+.navbar-default .navbar-nav > li:hover > a::before,
+.navbar-default .navbar-nav > li.active > a::before { transform: scaleX(1); }
+.navbar-default .navbar-nav > li > a .fa { color: var(--amber); margin-right: 4px; }
+
+.user_login > ul > li > a { color: var(--cream); }
+.user_login > ul > li > a .fa { color: var(--amber); }
+.user_login ul.dropdown-menu {
+  background: var(--ink-3);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  padding: 8px;
+  min-width: 190px;
+}
+.navbar-nav > li > .dropdown-menu a,
+.user_login ul.dropdown-menu li a {
+  color: rgba(247, 245, 242, 0.75);
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 9px 12px;
+}
+.navbar-nav > li > .dropdown-menu a:hover,
+.user_login ul.dropdown-menu li a:hover {
+  background: rgba(232, 163, 61, 0.12);
+  color: var(--amber);
+}
+
+.header_search input {
+  background: var(--ink-3);
+  border: 1px solid var(--line-dark);
+  color: var(--cream);
+  border-radius: var(--radius-pill);
+}
+.header_search input::placeholder { color: rgba(247, 245, 242, 0.4); }
+.header_search input:focus { border-color: var(--amber); }
+.header_search button { color: var(--amber); }
+#search_toggle { color: var(--cream); }
+#search_toggle:hover { color: var(--amber); }
+
+.navbar-default .navbar-toggle {
+  border-color: var(--line-dark);
+  border-radius: var(--radius-sm);
+}
+.navbar-default .navbar-toggle .icon-bar { background: var(--amber); }
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { background: rgba(232, 163, 61, 0.1); }
+
+@media (max-width: 991px) {
+  .collapse.navbar-collapse#navigation {
+    background: var(--ink-2);
+    border-top: 1px solid var(--line-dark);
+    margin: 0 -15px;
+    padding: 6px 15px 12px;
+  }
+  .navbar-default .navbar-nav > li > a { padding: 14px 6px; }
+  .navbar-default .navbar-nav > li > a::before { display: none; }
+}
+
+/* --------------------------------------------------------------------
+   3. Hero banner (index.php)
+   -------------------------------------------------------------------- */
+.banner-section {
+  background-image: linear-gradient(180deg, rgba(11, 13, 16, 0.55) 0%, rgba(11, 13, 16, 0.78) 55%, var(--cream) 100%), url("../images/banner-image6.jpg");
+  background-position: center 30%;
+  background-size: cover;
+  padding: 190px 0 150px;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+}
+.banner-section::after { display: none; }
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--amber);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid rgba(232, 163, 61, 0.4);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  background: rgba(232, 163, 61, 0.08);
+  margin-bottom: 26px;
+  animation: fadeUp 0.8s var(--ease) both;
+}
+.hero-eyebrow .fa { font-size: 10px; }
+
+.banner_content h1 {
+  color: var(--cream);
+  font-size: 58px;
+  line-height: 1.05;
+  text-transform: none;
+  font-weight: 700;
+  margin: 0 0 22px;
+  animation: fadeUp 0.8s var(--ease) 0.08s both;
+}
+.banner_content h1 em {
+  font-style: normal;
+  color: var(--amber);
+}
+.banner_content p {
+  color: rgba(247, 245, 242, 0.72);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 480px;
+  animation: fadeUp 0.8s var(--ease) 0.16s both;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+  animation: fadeUp 0.8s var(--ease) 0.24s both;
+}
+
+.hero-finder-card {
+  background: rgba(20, 23, 28, 0.65);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-card);
+  animation: fadeUp 0.8s var(--ease) 0.3s both;
+}
+.hero-finder-card .fc-tag {
+  display: inline-block;
+  color: var(--amber);
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.hero-finder-card h3 {
+  color: var(--cream);
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.hero-finder-card p {
+  color: rgba(247, 245, 242, 0.6);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.hero-finder-card .btn { width: 100%; text-align: center; }
+.hero-finder-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-dark);
+}
+.hero-finder-stats div strong {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--amber);
+  font-size: 20px;
+}
+.hero-finder-stats div span {
+  color: rgba(247, 245, 242, 0.5);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .banner-section { padding: 150px 0 90px; min-height: auto; }
+  .banner_content h1 { font-size: 38px; }
+  .hero-finder-card { margin-top: 40px; }
+}
+
+/* --------------------------------------------------------------------
+   4. Section headers / intro copy
+   -------------------------------------------------------------------- */
+.section-padding { padding: 90px 0; }
+.section-header { margin-bottom: 50px; }
+.section-header h2 {
+  font-size: 38px;
+  position: relative;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  background: var(--amber);
+  border-radius: 3px;
+}
+.section-header h2 span { color: var(--amber); }
+.section-header p {
+  color: var(--gray-700);
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.75;
+  font-size: 15.5px;
+}
+.white-text h2 { color: var(--cream); }
+.white-text h2::after { background: var(--amber); }
+
+/* Smart finder promo strip on index.php */
+.smart-finder-cta {
+  background: linear-gradient(120deg, var(--ink) 0%, var(--ink-2) 100%);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-lg);
+  padding: 44px 40px;
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.smart-finder-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(560px 220px at 12% 20%, rgba(232, 163, 61, 0.18), transparent 60%);
+}
+.smart-finder-cta > * { position: relative; z-index: 1; }
+.smart-finder-cta h3 {
+  color: var(--cream);
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.smart-finder-cta h3 .fa { color: var(--amber); margin-right: 10px; }
+.smart-finder-cta p {
+  color: rgba(247, 245, 242, 0.62);
+  max-width: 620px;
+  margin: 0 auto 24px;
+  line-height: 1.7;
+}
+
+/* Nav tabs used for "New Car" recent-cars tab */
+.recent-tab { margin-bottom: 6px; }
+.recent-tab ul.nav-tabs { border: none; justify-content: center; display: flex; }
+.recent-tab .nav.nav-tabs a {
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  color: var(--gray-700);
+}
+.recent-tab .nav.nav-tabs li.active a,
+.recent-tab .nav.nav-tabs li.active a:hover,
+.recent-tab .nav.nav-tabs li.active a:focus {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--amber);
+}
+.recent-tab .nav.nav-tabs li.active::after { display: none; }
+
+/* --------------------------------------------------------------------
+   5. Recent car cards (index.php)
+   -------------------------------------------------------------------- */
+.recent-car-list {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.col-list-3 { padding: 0 14px 28px; }
+.recent-car-list:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lift);
+}
+.car-info-box { overflow: hidden; }
+.car-info-box img { height: 210px; object-fit: cover; width: 100%; transition: transform 0.6s var(--ease); }
+.recent-car-list:hover .car-info-box img { transform: scale(1.08); }
+.car-info-box::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 70%;
+  background: linear-gradient(180deg, rgba(11, 13, 16, 0) 0%, rgba(11, 13, 16, 0.75) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.car-info-box ul {
+  background: transparent;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  width: auto;
+  padding: 0;
+  z-index: 2;
+}
+.car-info-box li {
+  background: rgba(11, 13, 16, 0.55);
+  border: 1px solid rgba(247, 245, 242, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: var(--radius-pill);
+  line-height: 1;
+  padding: 7px 12px;
+  margin: 0;
+  font-size: 11px;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+.car-info-box li .fa { color: var(--amber); margin-right: 6px; }
+.car-title-m { padding: 20px 20px 4px; overflow: visible; }
+.car-title-m h6 { max-width: none; float: none; margin: 0 0 6px; font-size: 16px; }
+.car-title-m h6 a { color: var(--ink); }
+.car-title-m h6 a:hover { color: var(--amber); }
+.car-title-m .price {
+  float: none;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(232, 163, 61, 0.14);
+  color: #9a6415;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+}
+.inventory_info_m { padding: 10px 20px 24px; }
+.inventory_info_m p { color: var(--gray-500); font-size: 13.5px; line-height: 1.7; }
+
+/* --------------------------------------------------------------------
+   6. Fun facts / stats
+   -------------------------------------------------------------------- */
+.fun-facts-section {
+  background: var(--ink);
+  padding: 90px 0;
+}
+.fun-facts-m { border-radius: 0; background: transparent !important; fill: none; }
+.fun-facts-m .cell { text-align: center; }
+.fun-facts-m h2 {
+  color: var(--cream);
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.fun-facts-m h2 .fa { color: var(--amber); font-size: 26px; }
+.fun-facts-m p {
+  color: rgba(247, 245, 242, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.fun-facts-section .dark-overlay { display: none; }
+
+/* --------------------------------------------------------------------
+   7. Testimonials
+   -------------------------------------------------------------------- */
+.testimonial-section {
+  background: var(--ink-2);
+  background-image: none;
+  background-attachment: scroll;
+  padding: 90px 0;
+}
+.testimonial-section .dark-overlay { display: none; }
+.testimonial-m {
+  background: var(--ink-3);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-lg);
+  padding: 34px 30px;
+  margin: 10px 12px 30px;
+  position: relative;
+}
+/* Reset legacy .testimonial-content (white card, float, fixed width, and a
+   steering-wheel background photo on ::after) so it can't bleed through the
+   new dark .testimonial-m card. */
+.testimonial-content {
+  background: transparent;
+  float: none;
+  width: auto;
+  padding: 0;
+  border-radius: 0;
+  position: static;
+}
+.testimonial-content::after {
+  content: none;
+  display: none;
+  background: none;
+  opacity: 0;
+}
+.testimonial-m::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  color: var(--amber);
+  font-size: 60px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+.testimonial-heading h5 {
+  color: var(--cream);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.testimonial-heading p {
+  color: rgba(247, 245, 242, 0.62);
+  line-height: 1.75;
+  font-size: 14.5px;
+}
+.owl-theme .owl-controls .owl-page span {
+  background: rgba(247, 245, 242, 0.3);
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  background: var(--amber);
+}
+.owl-theme .owl-controls .owl-buttons div {
+  background: rgba(11, 13, 16, 0.55);
+  border: 1px solid rgba(247, 245, 242, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--cream);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  line-height: 40px;
+  font-size: 0;
+  text-align: center;
+}
+.owl-theme .owl-controls .owl-buttons div::before {
+  font-family: "FontAwesome";
+  font-size: 16px;
+  line-height: 40px;
+}
+.owl-theme .owl-controls .owl-buttons div.owl-prev::before { content: "\f104"; }
+.owl-theme .owl-controls .owl-buttons div.owl-next::before { content: "\f105"; }
+.owl-theme .owl-controls .owl-buttons div:hover { background: var(--amber); border-color: var(--amber); color: var(--amber-ink); }
+
+/* --------------------------------------------------------------------
+   8. Footer
+   -------------------------------------------------------------------- */
+footer { background: var(--ink); }
+.footer-top {
+  background: var(--ink);
+  padding: 70px 0 40px;
+  border-top: 1px solid var(--line-dark);
+}
+.footer-top h6 {
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 22px;
+}
+.footer-top ul li a { color: rgba(247, 245, 242, 0.55); font-size: 14px; }
+.footer-top ul li a:hover { color: var(--amber); }
+.newsletter-form .form-control {
+  background: var(--ink-3);
+  border: 1px solid var(--line-dark);
+  color: var(--cream);
+  border-radius: var(--radius-sm);
+  height: 48px;
+}
+.newsletter-form .form-control::placeholder { color: rgba(247, 245, 242, 0.4); }
+.newsletter-form .btn { margin-top: 12px; }
+.subscribed-text { color: rgba(247, 245, 242, 0.4); font-size: 12.5px; margin-top: 10px; }
+.footer-bottom {
+  background: var(--ink-2);
+  padding: 22px 0;
+  border-top: 1px solid var(--line-dark);
+}
+.footer-bottom .copy-right { color: rgba(247, 245, 242, 0.45); font-size: 13px; }
+.footer_widget p { color: rgba(247, 245, 242, 0.45); }
+.footer_widget ul li a {
+  color: rgba(247, 245, 242, 0.7);
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+}
+.footer_widget ul li a:hover { color: var(--amber-ink); background: var(--amber); border-color: var(--amber); }
+
+.back-top a {
+  background: var(--amber);
+  color: var(--amber-ink);
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+}
+.back-top a:hover { background: var(--amber-2); }
+
+/* --------------------------------------------------------------------
+   9. Page header banners (listing / contact / about / etc.)
+   -------------------------------------------------------------------- */
+.page-header {
+  background-image: linear-gradient(180deg, rgba(11, 13, 16, 0.72) 0%, rgba(11, 13, 16, 0.85) 100%), url("../images/listing-page-header-img.jpg");
+  padding: 130px 0 60px;
+}
+.contactus_page { background-image: linear-gradient(180deg, rgba(11, 13, 16, 0.72) 0%, rgba(11, 13, 16, 0.85) 100%), url("../images/contact-page-header-img.jpg"); }
+.aboutus_page { background-image: linear-gradient(180deg, rgba(11, 13, 16, 0.72) 0%, rgba(11, 13, 16, 0.85) 100%), url("../images/aboutus-page-header-img.jpg"); }
+.page-header .dark-overlay { display: none; }
+.page-heading h1 {
+  color: var(--cream);
+  font-size: 38px;
+  text-transform: none;
+}
+.page-heading p {
+  color: rgba(247, 245, 242, 0.72);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 640px;
+}
+.coustom-breadcrumb li, .coustom-breadcrumb a { color: rgba(247, 245, 242, 0.55); font-size: 13px; }
+.coustom-breadcrumb a:hover { color: var(--amber); }
+.coustom-breadcrumb a::after { color: rgba(247, 245, 242, 0.3); }
+
+/* --------------------------------------------------------------------
+   10. Listings (car-listing / search / search-carresult)
+   -------------------------------------------------------------------- */
+.listing-page { padding: 70px 0 90px; background: var(--cream); }
+.result-sorting-wrapper { margin-bottom: 24px; }
+.sorting-count p span {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: 600;
+}
+.product-listing-m {
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  margin-bottom: 26px;
+  display: flex;
+  align-items: stretch;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.product-listing-m:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+.product-listing-img { width: 320px; flex: 0 0 320px; overflow: hidden; }
+.product-listing-img img { height: 100%; min-height: 200px; object-fit: cover; transition: transform 0.6s var(--ease); }
+.product-listing-m:hover .product-listing-img img { transform: scale(1.06); }
+.product-listing-content { padding: 24px 28px; flex: 1; }
+.product-listing-content h5 a { color: var(--ink); font-size: 18px; }
+.product-listing-content h5 a:hover { color: var(--amber-2); }
+.product-listing-content .list-price {
+  display: inline-block;
+  color: #9a6415;
+  background: rgba(232, 163, 61, 0.14);
+  font-family: var(--font-display);
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 5px 14px;
+  font-size: 13px;
+  margin: 8px 0 14px;
+}
+.product-listing-content ul { margin-bottom: 18px; }
+.product-listing-content li { color: var(--gray-500); font-size: 13px; border-right: 1px solid var(--line-light); }
+.product-listing-content li .fa { color: var(--amber); }
+
+@media (max-width: 767px) {
+  .product-listing-m { flex-direction: column; }
+  .product-listing-img { width: 100%; flex-basis: auto; }
+  .product-listing-img img { height: 200px; width: 100%; }
+}
+
+/* Sidebar */
+.sidebar_widget {
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 26px;
+  margin-bottom: 26px;
+}
+.widget_heading h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-light);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+.widget_heading h5 .fa { color: var(--amber); margin-right: 8px; }
+.sidebar_filter .form-control {
+  background: var(--cream);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm);
+  height: 46px;
+  color: var(--ink);
+}
+.sidebar_filter .form-control:focus { border-color: var(--amber); box-shadow: none; }
+.recent_addedcars ul li { border-bottom: 1px solid var(--line-light); padding: 14px 0; }
+.recent_addedcars ul li:last-child { border-bottom: none; padding-bottom: 0; }
+.recent_post_img img { border-radius: var(--radius-sm); width: 74px; height: 60px; object-fit: cover; }
+.recent_post_title a { color: var(--ink); font-size: 13.5px; }
+.recent_post_title a:hover { color: var(--amber-2); }
+.widget_price { color: var(--amber-2); font-family: var(--font-display); font-weight: 700; font-size: 13px; }
+
+/* --------------------------------------------------------------------
+   11. Vehicle details page
+   -------------------------------------------------------------------- */
+#listing_img_slider { background: var(--ink); }
+#listing_img_slider img { max-height: 560px; width: 100%; object-fit: cover; }
+.owl-theme .owl-controls { margin-top: 0; }
+
+.listing-detail { padding: 60px 0 90px; background: var(--cream); }
+.listing_detail_head h2 { font-size: 30px; }
+.listing_detail_head .price_info {
+  text-align: right;
+}
+.listing_detail_head .price_info p {
+  color: var(--amber-2);
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  display: inline;
+}
+.main_features {
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 10px 0;
+  margin: 26px 0;
+}
+.main_features ul { display: flex; }
+.main_features ul li {
+  flex: 1;
+  text-align: center;
+  padding: 22px 10px;
+  border-right: 1px solid var(--line-light);
+}
+.main_features ul li:last-child { border-right: none; }
+.main_features ul li .fa { color: var(--amber); font-size: 22px; margin-bottom: 8px; display: block; }
+.main_features ul li h5 { margin: 0 0 4px; font-size: 16px; }
+.main_features ul li p { color: var(--gray-500); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
+
+.listing_more_info { margin-top: 20px; }
+.listing_detail_wrap .nav-tabs {
+  border: none;
+  background: var(--paper);
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  padding: 6px;
+  box-shadow: var(--shadow-soft);
+}
+.listing_detail_wrap .nav-tabs > li { margin: 0; }
+.listing_detail_wrap .nav-tabs > li > a {
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gray-700);
+  padding: 11px 24px;
+  margin: 0;
+}
+.listing_detail_wrap .nav-tabs > li.active > a,
+.listing_detail_wrap .nav-tabs > li.active > a:hover,
+.listing_detail_wrap .nav-tabs > li.active > a:focus {
+  background: var(--ink);
+  color: var(--amber);
+}
+.listing_detail_wrap .tab-content {
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 30px;
+  margin-top: 18px;
+}
+.listing_detail_wrap .tab-content p { color: var(--gray-700); line-height: 1.8; }
+
+/* Accessories table — reset the legacy generic `table th/td { border:1px
+   solid #ccc }` and `table thead { background:#eee }` rules from style.css
+   (they win on border-top/left/right and thead background because this
+   block previously only set border-bottom/thead-th, leaving a "default
+   browser table" look) and give it the same card/row treatment as the
+   rest of the page. */
+.listing_detail_wrap table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+.listing_detail_wrap table th,
+.listing_detail_wrap table td {
+  border: none;
+  padding: 14px 6px;
+}
+.listing_detail_wrap table thead {
+  background: transparent;
+}
+.listing_detail_wrap table thead th,
+.listing_detail_wrap table thead td {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-light);
+}
+.listing_detail_wrap table tbody tr {
+  transition: background-color 0.25s var(--ease);
+}
+.listing_detail_wrap table tbody tr:nth-child(even) {
+  background: var(--cream);
+}
+.listing_detail_wrap table tbody tr:hover {
+  background: rgba(232, 163, 61, 0.08);
+}
+.listing_detail_wrap table tbody td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line-light);
+  color: var(--gray-700);
+  font-size: 14px;
+}
+.listing_detail_wrap table tbody td:first-child {
+  color: var(--ink);
+  font-weight: 500;
+}
+.listing_detail_wrap table tbody tr:last-child td { border-bottom: none; }
+.listing_detail_wrap table tbody td .fa-check {
+  color: var(--amber-ink);
+  background: var(--amber);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+}
+.listing_detail_wrap table tbody td .fa-close {
+  color: var(--gray-500);
+  opacity: 0.55;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.share_vehicle { margin-bottom: 20px; }
+.share_vehicle a {
+  color: var(--gray-500);
+  border: 1px solid var(--line-light);
+  border-radius: 50%;
+  width: 36px; height: 36px; line-height: 34px; text-align: center; display: inline-block;
+}
+.share_vehicle a:hover { color: var(--amber-ink); background: var(--amber); border-color: var(--amber); }
+
+aside .sidebar_widget form .form-group label { color: var(--gray-700); font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+
+.similar_cars h3 { font-size: 24px; margin-bottom: 24px; position: relative; padding-bottom: 14px; }
+.similar_cars h3::after { content: ""; position: absolute; left: 0; bottom: 0; width: 46px; height: 3px; background: var(--amber); border-radius: 3px; }
+.grid_listing { padding: 0 14px 28px; }
+.grid_listing .product-listing-m { flex-direction: column; box-shadow: var(--shadow-card); }
+.grid_listing .product-listing-img { width: 100%; flex-basis: auto; }
+.grid_listing .product-listing-img img { height: 190px; width: 100%; }
+.grid_listing .product-listing-content { padding: 18px 20px 22px; }
+.grid_listing .product-listing-content h5 { font-size: 15px; }
+.grid_listing .product-listing-content .list-price { margin: 6px 0 12px; }
+.grid_listing .product-listing-content ul.features_list li { color: var(--gray-500); font-size: 12px; }
+
+/* --------------------------------------------------------------------
+   12. Contact page
+   -------------------------------------------------------------------- */
+.contact_us { padding: 80px 0; background: var(--cream); }
+.contact_us h3 { font-size: 22px; margin-bottom: 22px; }
+.contact_form {
+  background: var(--paper) !important;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 30px;
+}
+.contact_form .control-label { color: var(--gray-700); font-size: 13px; font-weight: 600; }
+.contact_form .control-label span { color: var(--amber-2); }
+.contact_form .form-control.white_bg {
+  background: var(--cream);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm);
+  height: 46px;
+  color: var(--ink);
+}
+.contact_form textarea.form-control.white_bg { height: auto; }
+.contact_form .form-control.white_bg:focus { border-color: var(--amber); box-shadow: none; }
+.contact_detail ul { background: var(--paper); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); padding: 10px 26px; }
+.contact_detail li { border-bottom: 1px solid var(--line-light); padding: 20px 0; }
+.contact_detail li:last-child { border-bottom: none; }
+.icon_wrap .fa {
+  background: rgba(232, 163, 61, 0.12);
+  color: var(--amber-2);
+  border: 1px solid rgba(232, 163, 61, 0.3);
+  border-radius: 50%;
+}
+.contact_info_m a { color: var(--gray-700); }
+.contact_info_m a:hover { color: var(--amber-2); }
+
+/* --------------------------------------------------------------------
+   13. About / generic CMS page.php
+   -------------------------------------------------------------------- */
+.about_us { padding: 90px 0; background: var(--cream); }
+.about_us .section-header h2 { font-size: 34px; }
+.about_us .lead { color: var(--gray-700); font-size: 16px; line-height: 1.9; }
+
+/* --------------------------------------------------------------------
+   14. Smart Finder / Greedy algorithm page
+   -------------------------------------------------------------------- */
+.greedy-form-container {
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+  padding: 70px 0 90px;
+  margin-bottom: 0;
+}
+.greedy-form {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+}
+.greedy-form h2 { font-size: 26px; }
+.greedy-form h2 .fa { color: var(--amber-2); }
+.greedy-form .text-muted { color: var(--gray-500) !important; }
+.greedy-form .form-group label { color: var(--gray-700); font-size: 13px; font-weight: 600; }
+.greedy-form .form-control {
+  background: var(--cream);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm);
+  height: 46px;
+  color: var(--ink);
+}
+.greedy-form .form-control:focus { border-color: var(--amber); box-shadow: none; }
+
+.algorithm-info {
+  background: rgba(232, 163, 61, 0.08);
+  border-left: 3px solid var(--amber);
+  border-radius: var(--radius-sm);
+}
+
+.recommendation-card {
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.recommendation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card);
+}
+.recommendation-card h5 { font-size: 15.5px; }
+.score-badge {
+  background: var(--ink);
+  color: var(--amber);
+  font-family: var(--font-display);
+  border-radius: var(--radius-pill);
+}
+.greedy-highlight {
+  background: var(--amber);
+  color: var(--amber-ink);
+}
+.score-breakdown { background: var(--cream); border-radius: var(--radius-sm); padding: 15px; margin-top: 10px; }
+.score-item { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px; color: var(--gray-700); }
+.criteria-weight { color: var(--gray-500); }
+
+.alert-info, .alert-warning, .alert-danger, .alert-success {
+  border-radius: var(--radius-md);
+  border: none;
+  padding: 24px;
+}
+.alert-info { background: var(--ink); color: var(--cream); }
+.alert-info .fa { color: var(--amber); }
+.alert-warning { background: rgba(232, 163, 61, 0.12); color: #7a4f10; }
+.alert-danger { background: rgba(198, 91, 79, 0.12); color: #7a2e24; }
+
+/* --------------------------------------------------------------------
+   15. Forms / modals (login, registration, forgot password)
+   -------------------------------------------------------------------- */
+.modal-backdrop { background: var(--ink); }
+.modal-backdrop.in { opacity: 0.75; }
+.modal-content {
+  background: var(--paper);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.modal-header {
+  background: var(--ink);
+  border-bottom: none;
+  padding: 26px 30px;
+}
+.modal-header .modal-title { color: var(--cream); font-size: 20px; }
+.modal-header .close { color: var(--cream); opacity: 0.6; text-shadow: none; }
+.modal-header .close:hover { opacity: 1; color: var(--amber); }
+.modal-body { padding: 30px; }
+.modal-body .form-control {
+  background: var(--cream);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm);
+  height: 46px;
+  color: var(--ink);
+}
+.modal-body .form-control:focus { border-color: var(--amber); box-shadow: none; }
+.modal-body .btn-block { margin-top: 8px; }
+.modal-footer {
+  border-top: 1px solid var(--line-light);
+  text-align: center;
+  padding: 20px 30px;
+}
+.modal-footer p { color: var(--gray-500); font-size: 13.5px; margin: 6px 0; }
+.modal-footer a { color: var(--amber-2); font-weight: 600; }
+.checkbox label { color: var(--gray-700); font-size: 13px; }
+.checkbox label::before { border-color: var(--line-light); border-radius: 4px; }
+.checkbox input[type=checkbox]:checked + label::before { background: var(--amber); border-color: var(--amber); color: var(--amber-ink); }
+
+/* --------------------------------------------------------------------
+   16. Misc alerts on contact-us.php
+   -------------------------------------------------------------------- */
+.errorWrap, .succWrap { border-radius: var(--radius-sm); font-family: var(--font-body); }
+
+/* --------------------------------------------------------------------
+   17. Utility count-up
+   -------------------------------------------------------------------- */
+.count-up { display: inline-block; }

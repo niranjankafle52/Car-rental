@@ -7,6 +7,7 @@ include('includes/config.php');
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js-anim');</script>
 <title>Car Rental Portal | Page Details</title>
 
 <!-- Bootstrap -->
@@ -15,17 +16,14 @@ include('includes/config.php');
 <!-- Custom Style -->
 <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
-<!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <!-- FontAwesome -->
 <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
-</style>
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/modern-theme.css" type="text/css">
 </head>
 <body>
 
@@ -63,7 +61,7 @@ if ($query->rowCount() > 0) {
 <!-- About Us Content -->
 <section class="about_us section-padding">
   <div class="container">
-    <div class="section-header text-center">
+    <div class="section-header text-center reveal">
       <h2 class="mb-4"><?php echo htmlentities($result->PageName); ?></h2>
       <p class="lead text-muted">
         We offer a varied fleet of cars, ranging from compact models. All our vehicles are equipped with air conditioning, power steering, and electric windows. Each car is bought and maintained at official dealerships to ensure reliability and safety.
@@ -99,6 +97,7 @@ if ($query->rowCount() > 0) {
 <script src="assets/js/bootstrap-slider.min.js"></script>
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/modern-interactions.js"></script>
 
 </body>
 </html>

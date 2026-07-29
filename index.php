@@ -12,7 +12,7 @@ ob_start();
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-
+<script>document.documentElement.classList.add('js-anim');</script>
 <title>Car Rental Portal</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
@@ -22,19 +22,15 @@ ob_start();
 <link href="assets/css/slick.css" rel="stylesheet">
 <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
 <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/orange.css" title="orange" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/blue.css" title="blue" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/pink.css" title="pink" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/green.css" title="green" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/purple.css" title="purple" media="all" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/modern-theme.css" type="text/css">
 </head>
 <body>
   
@@ -49,48 +45,57 @@ ob_start();
   <div class="container">
     <div class="div_zindex">
       <div class="row">
-        <div class="col-md-5 col-md-push-7">
+        <div class="col-md-7">
           <div class="banner_content">
-            <h1>&nbsp;</h1>
-            <p>&nbsp; </p>
+            <span class="hero-eyebrow"><i class="fa fa-bolt" aria-hidden="true"></i> Premium Fleet &middot; Instant Booking</span>
+            <h1>Drive Something <em>Extraordinary</em>, Every Time</h1>
+            <p>A curated fleet of premium vehicles, transparent pricing and a booking experience built for people who expect more from a rental. Find your match in minutes.</p>
+            <div class="hero-actions">
+              <a href="car-listing.php" class="btn">Browse The Fleet</a>
+              <a href="greedy-form.php" class="btn outline"><i class="fa fa-brain" aria-hidden="true"></i> Smart Car Finder</a>
             </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="hero-finder-card">
+            <span class="fc-tag">Smart Car Finder</span>
+            <h3>Let the algorithm pick your car</h3>
+            <p>Tell us your dates, budget and preferences &mdash; our greedy-optimization engine scores every vehicle in the fleet and surfaces the best matches instantly.</p>
+            <a href="greedy-form.php" class="btn"><i class="fa fa-magic" aria-hidden="true"></i> Find My Perfect Car</a>
+            <div class="hero-finder-stats">
+              <div><strong>10+</strong><span>Vehicles</span></div>
+              <div><strong>24/7</strong><span>Support</span></div>
+              <div><strong>4.9<i class="fa fa-star" aria-hidden="true" style="font-size:12px;"></i></strong><span>Rated</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- /Banners --> 
+<!-- /Banners -->
 
 
 <!-- Resent Cat-->
 <section class="section-padding gray-bg">
   <div class="container">
-    <div class="section-header text-center">
-
-
-
-
-
-
-
-    +
-
+    <div class="section-header text-center reveal">
     <h2>Find the Best Car For You</h2><p>When choosing a new car, it's important to consider factors like performance, fuel efficiency, safety features, and technology. Depending on your needs, you might prioritize a fuel-efficient hybrid, a high-performance sports car, or a spacious family vehicle with advanced safety and tech features. New cars often come equipped with modern amenities such as infotainment systems, connectivity options, and driver-assistance features. Additionally, consider your budget, long-term maintenance costs, and the car's eco-friendliness, especially if you're interested in electric or hybrid options. Test-driving a few models will help ensure you find the best car that fits your lifestyle and preferences.</p>
-    </div> 
-    
+    </div>
+
     <!-- Greedy Algorithm Feature Highlight -->
     <div class="row mb-4">
       <div class="col-md-12">
-        <div class="alert alert-info text-center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 15px;">
+        <div class="smart-finder-cta text-center reveal">
           <h3><i class="fa fa-brain" aria-hidden="true"></i> Try Our Smart Car Finder!</h3>
           <p>Our advanced greedy algorithm analyzes multiple criteria to find your perfect car match. Get personalized recommendations based on price, availability, preferences, and quality.</p>
-          <a href="greedy-form.php" class="btn btn-light btn-lg">
+          <a href="greedy-form.php" class="btn">
             <i class="fa fa-magic" aria-hidden="true"></i> Find My Perfect Car
           </a>
         </div>
       </div>
     </div>
-    
+
     <div class="row"> 
       
       <!-- Nav tabs -->
@@ -114,7 +119,7 @@ foreach($results as $result)
 {  
 ?>  
 
-<div class="col-list-3">
+<div class="col-list-3 reveal">
 <div class="recent-car-list">
 <div class="car-info-box"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" class="img-responsive" alt="image"></a>
 <ul>
@@ -145,33 +150,33 @@ foreach($results as $result)
   <div class="container div_zindex">
     <div class="row">
       <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
+        <div class="fun-facts-m reveal">
           <div class="cell">
-            <h2><i class="fa fa-calendar" aria-hidden="true"></i>40+</h2>
+            <h2><i class="fa fa-calendar" aria-hidden="true"></i><span class="count-up" data-count="40">0</span>+</h2>
             <p>Years In Business</p>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
+        <div class="fun-facts-m reveal">
           <div class="cell">
-            <h2><i class="fa fa-car" aria-hidden="true"></i>1200+</h2>
+            <h2><i class="fa fa-car" aria-hidden="true"></i><span class="count-up" data-count="1200">0</span>+</h2>
             <p>New Cars For Sale</p>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
+        <div class="fun-facts-m reveal">
           <div class="cell">
-            <h2><i class="fa fa-car" aria-hidden="true"></i>1000+</h2>
+            <h2><i class="fa fa-car" aria-hidden="true"></i><span class="count-up" data-count="1000">0</span>+</h2>
             <p>Used Cars For Sale</p>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-xs-6 col-sm-3">
-        <div class="fun-facts-m">
+        <div class="fun-facts-m reveal">
           <div class="cell">
-            <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>600+</h2>
+            <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="count-up" data-count="600">0</span>+</h2>
             <p>Satisfied Customers</p>
           </div>
         </div>
@@ -187,7 +192,7 @@ foreach($results as $result)
 <!--Testimonial -->
 <section class="section-padding testimonial-section parallex-bg">
   <div class="container div_zindex">
-    <div class="section-header white-text text-center">
+    <div class="section-header white-text text-center reveal">
       <h2>Our Satisfied <span>Customers</span></h2>
     </div>
     <div class="row">
@@ -251,15 +256,14 @@ foreach($results as $result)
 
 <!-- Scripts --> 
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/interface.js"></script> 
-<!--Switcher-->
-<script src="assets/switcher/js/switcher.js"></script>
-<!--bootstrap-slider-JS--> 
-<script src="assets/js/bootstrap-slider.min.js"></script> 
-<!--Slider-JS--> 
-<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/interface.js"></script>
+<!--bootstrap-slider-JS-->
+<script src="assets/js/bootstrap-slider.min.js"></script>
+<!--Slider-JS-->
+<script src="assets/js/slick.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/modern-interactions.js"></script>
 
 </body>
 

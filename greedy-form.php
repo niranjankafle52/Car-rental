@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['find_optimal_cars']))
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js-anim');</script>
 <title>Car Rental Portal | Greedy Algorithm Optimization</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
@@ -58,94 +59,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['find_optimal_cars']))
 <!--FontAwesome Font Style -->
 <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-<!-- SWITCHER -->
-<link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
-<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true" />
-<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/orange.css" title="orange" media="all" />
-<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/blue.css" title="blue" media="all" />
-<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/pink.css" title="pink" media="all" />
-<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/green.css" title="green" media="all" />
-<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/purple.css" title="purple" media="all" />
-        
 <!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-
-<style>
-.greedy-form-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 40px 0;
-    margin-bottom: 40px;
-}
-
-.greedy-form {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.algorithm-info {
-    background: #f8f9fa;
-    border-left: 4px solid #007bff;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-}
-
-.score-breakdown {
-    background: #e3f2fd;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.score-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-
-.recommendation-card {
-    border: 1px solid #dee2e6;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.recommendation-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.score-badge {
-    background: linear-gradient(45deg, #28a745, #20c997);
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.criteria-weight {
-    font-size: 12px;
-    color: #6c757d;
-}
-
-.greedy-highlight {
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
-    color: white;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 11px;
-    font-weight: bold;
-}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/modern-theme.css" type="text/css">
 </head>
 <body>
 
@@ -177,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['find_optimal_cars']))
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <div class="greedy-form">
+        <div class="greedy-form reveal">
           <div class="text-center mb-4">
             <h2><i class="fa fa-cogs" aria-hidden="true"></i> Smart Car Finder</h2>
             <p class="text-muted">Our greedy algorithm analyzes multiple criteria to find your perfect car match</p>
@@ -307,7 +230,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['find_optimal_cars']))
       <div class="row">
         <?php foreach ($recommendations as $index => $car): ?>
           <div class="col-md-6 col-lg-4">
-            <div class="recommendation-card">
+            <div class="recommendation-card reveal">
               <div class="d-flex justify-content-between align-items-start mb-3">
                 <h5><?php echo htmlentities($car['BrandName'] . ' ' . $car['VehiclesTitle']); ?></h5>
                 <span class="score-badge">
@@ -402,15 +325,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['find_optimal_cars']))
 
 <!-- Scripts --> 
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/interface.js"></script> 
-<!--Switcher-->
-<script src="assets/switcher/js/switcher.js"></script>
-<!--bootstrap-slider-JS--> 
-<script src="assets/js/bootstrap-slider.min.js"></script> 
-<!--Slider-JS--> 
-<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/interface.js"></script>
+<!--bootstrap-slider-JS-->
+<script src="assets/js/bootstrap-slider.min.js"></script>
+<!--Slider-JS-->
+<script src="assets/js/slick.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/modern-interactions.js"></script>
 
 <script>
 // Form validation and enhancement

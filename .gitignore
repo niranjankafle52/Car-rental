@@ -9,6 +9,9 @@ composer.phar
 .env.*
 !.env.example
 
+# Secrets
+includes/chatbot_config.php
+
 # Logs
 *.log
 logs/

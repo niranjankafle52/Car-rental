@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="220" height="60" role="img" aria-label="Car Rental Portal">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5A623"/>
+      <stop offset="1" stop-color="#E8A33D"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="9" width="42" height="42" rx="11" fill="url(#badgeGrad)"/>
+  <path d="M11 33.5 L14.2 25.3c.6-1.5 2-2.5 3.6-2.5h10.4c1.6 0 3 1 3.6 2.5l3.2 8.2v6.4c0 .9-.7 1.6-1.6 1.6h-1.3c-.9 0-1.6-.7-1.6-1.6v-1.4H15.5v1.4c0 .9-.7 1.6-1.6 1.6h-1.3c-.9 0-1.6-.7-1.6-1.6v-6.4Z" fill="#0B0D10"/>
+  <circle cx="16.3" cy="34.6" r="2.1" fill="#F5A623"/>
+  <circle cx="29.7" cy="34.6" r="2.1" fill="#F5A623"/>
+  <path d="M14.6 28.8h16.8" stroke="#0B0D10" stroke-width="1.4" opacity=".0"/>
+  <text x="53" y="27" font-family="'Space Grotesk', 'Arial', sans-serif" font-weight="700" font-size="18" letter-spacing=".2" fill="#F7F5F2">CAR RENTAL</text>
+  <text x="53" y="45" font-family="'Space Grotesk', 'Arial', sans-serif" font-weight="500" font-size="13" letter-spacing="4" fill="#E8A33D">PORTAL</text>
+</svg>
