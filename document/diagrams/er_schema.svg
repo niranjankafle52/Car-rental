@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1500" viewBox="0 0 1900 1500">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#1a1a1a"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1900" height="1500" fill="#ffffff"/>
+<rect x="90" y="80" width="340" height="276" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="90" y="80" width="340" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="260.0" y="102.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblusers</text>
+<text x="100" y="129.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="420" y="129.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="90" y1="136" x2="430" y2="136" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="151.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">FullName</text>
+<line x1="90" y1="158" x2="430" y2="158" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="173.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">EmailId</text>
+<text x="420" y="173.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#222222" text-anchor="end">UNIQUE</text>
+<line x1="90" y1="180" x2="430" y2="180" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="195.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Password</text>
+<line x1="90" y1="202" x2="430" y2="202" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="217.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">ContactNo</text>
+<line x1="90" y1="224" x2="430" y2="224" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="239.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">dob</text>
+<line x1="90" y1="246" x2="430" y2="246" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="261.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Address</text>
+<line x1="90" y1="268" x2="430" y2="268" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="283.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">City</text>
+<line x1="90" y1="290" x2="430" y2="290" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="305.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Country</text>
+<line x1="90" y1="312" x2="430" y2="312" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="327.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">RegDate</text>
+<line x1="90" y1="334" x2="430" y2="334" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="349.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">UpdationDate</text>
+<rect x="1470" y="80" width="320" height="122" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="1470" y="80" width="320" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="1630.0" y="102.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblbrands</text>
+<text x="1480" y="129.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="1780" y="129.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="1470" y1="136" x2="1790" y2="136" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1480" y="151.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">BrandName</text>
+<line x1="1470" y1="158" x2="1790" y2="158" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1480" y="173.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">CreationDate</text>
+<line x1="1470" y1="180" x2="1790" y2="180" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1480" y="195.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">UpdationDate</text>
+<rect x="1030" y="300" width="380" height="254" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="1030" y="300" width="380" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="1220.0" y="322.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblvehicles</text>
+<text x="1040" y="349.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="1400" y="349.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="1030" y1="356" x2="1410" y2="356" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="371.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">VehiclesTitle</text>
+<line x1="1030" y1="378" x2="1410" y2="378" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="393.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#8a5a1e" text-anchor="start">VehiclesBrand</text>
+<text x="1400" y="393.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#8a5a1e" text-anchor="end">FK</text>
+<line x1="1030" y1="400" x2="1410" y2="400" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="415.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">VehiclesOverview</text>
+<line x1="1030" y1="422" x2="1410" y2="422" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="437.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">PricePerDay</text>
+<line x1="1030" y1="444" x2="1410" y2="444" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="459.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">FuelType</text>
+<line x1="1030" y1="466" x2="1410" y2="466" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="481.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">ModelYear</text>
+<line x1="1030" y1="488" x2="1410" y2="488" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="503.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">SeatingCapacity</text>
+<line x1="1030" y1="510" x2="1410" y2="510" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="525.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Vimage1..Vimage5</text>
+<line x1="1030" y1="532" x2="1410" y2="532" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1040" y="547.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">AirConditioner...CrashSensor</text>
+<text x="1400" y="547.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#222222" text-anchor="end">10 flags</text>
+<rect x="560" y="620" width="380" height="254" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="560" y="620" width="380" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="750.0" y="642.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblbooking</text>
+<text x="570" y="669.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="930" y="669.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="560" y1="676" x2="940" y2="676" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="691.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">BookingNumber</text>
+<line x1="560" y1="698" x2="940" y2="698" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="713.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#8a5a1e" text-anchor="start">userEmail</text>
+<text x="930" y="713.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#8a5a1e" text-anchor="end">FK</text>
+<line x1="560" y1="720" x2="940" y2="720" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="735.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#8a5a1e" text-anchor="start">VehicleId</text>
+<text x="930" y="735.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#8a5a1e" text-anchor="end">FK</text>
+<line x1="560" y1="742" x2="940" y2="742" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="757.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">FromDate</text>
+<line x1="560" y1="764" x2="940" y2="764" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="779.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">ToDate</text>
+<line x1="560" y1="786" x2="940" y2="786" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="801.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">message</text>
+<line x1="560" y1="808" x2="940" y2="808" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="823.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Status</text>
+<text x="930" y="823.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#222222" text-anchor="end">0/1/2</text>
+<line x1="560" y1="830" x2="940" y2="830" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="845.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">PostingDate</text>
+<line x1="560" y1="852" x2="940" y2="852" stroke="#dddddd" stroke-width="0.6"/>
+<text x="570" y="867.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">LastUpdationDate</text>
+<rect x="90" y="620" width="340" height="144" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="90" y="620" width="340" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="260.0" y="642.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tbltestimonial</text>
+<text x="100" y="669.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="420" y="669.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="90" y1="676" x2="430" y2="676" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="691.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#8a5a1e" text-anchor="start">UserEmail</text>
+<text x="420" y="691.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#8a5a1e" text-anchor="end">FK</text>
+<line x1="90" y1="698" x2="430" y2="698" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="713.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Testimonial</text>
+<line x1="90" y1="720" x2="430" y2="720" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="735.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">PostingDate</text>
+<line x1="90" y1="742" x2="430" y2="742" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="757.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">status</text>
+<polyline points="430,162.8 560,696.2" fill="none" stroke="#444444" stroke-width="1.4"/>
+<rect x="459.91" y="420.7" width="70.17999999999999" height="16.5" fill="#ffffff"/>
+<text x="495.0" y="432.8" font-family="Calibri, Arial, sans-serif" font-size="11" font-weight="normal" fill="#333333" text-anchor="middle">1:N  places</text>
+<polyline points="260.0,356 260.0,620" fill="none" stroke="#444444" stroke-width="1.4"/>
+<rect x="224.91" y="479.2" width="70.17999999999999" height="16.5" fill="#ffffff"/>
+<text x="260.0" y="491.3" font-family="Calibri, Arial, sans-serif" font-size="11" font-weight="normal" fill="#333333" text-anchor="middle">1:N  writes</text>
+<polyline points="1470,116.6 1220.0,300" fill="none" stroke="#444444" stroke-width="1.4"/>
+<rect x="1297.15" y="199.5" width="95.69999999999999" height="16.5" fill="#ffffff"/>
+<text x="1345.0" y="211.60000000000002" font-family="Calibri, Arial, sans-serif" font-size="11" font-weight="normal" fill="#333333" text-anchor="middle">1:N  belongs to</text>
+<polyline points="1030,376.2 940,696.2" fill="none" stroke="#444444" stroke-width="1.4"/>
+<rect x="940.34" y="527.4000000000001" width="89.32" height="16.5" fill="#ffffff"/>
+<text x="985.0" y="539.5" font-family="Calibri, Arial, sans-serif" font-size="11" font-weight="normal" fill="#333333" text-anchor="middle">1:N  booked in</text>
+<text x="90" y="980" font-family="Calibri, Arial, sans-serif" font-size="14.5" font-weight="bold" fill="#222222" text-anchor="start">Supporting / Content Tables (no foreign-key relations)</text>
+<rect x="90" y="1010" width="300" height="122" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="90" y="1010" width="300" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="240.0" y="1032.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">admin</text>
+<text x="100" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="380" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="90" y1="1066" x2="390" y2="1066" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="1081.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">UserName</text>
+<line x1="90" y1="1088" x2="390" y2="1088" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="1103.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Password</text>
+<line x1="90" y1="1110" x2="390" y2="1110" stroke="#dddddd" stroke-width="0.6"/>
+<text x="100" y="1125.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">updationDate</text>
+<rect x="420" y="1010" width="320" height="122" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="420" y="1010" width="320" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="580.0" y="1032.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblcontactusinfo</text>
+<text x="430" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="730" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="420" y1="1066" x2="740" y2="1066" stroke="#dddddd" stroke-width="0.6"/>
+<text x="430" y="1081.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Address</text>
+<line x1="420" y1="1088" x2="740" y2="1088" stroke="#dddddd" stroke-width="0.6"/>
+<text x="430" y="1103.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">EmailId</text>
+<line x1="420" y1="1110" x2="740" y2="1110" stroke="#dddddd" stroke-width="0.6"/>
+<text x="430" y="1125.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">ContactNo</text>
+<rect x="770" y="1010" width="340" height="166" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="770" y="1010" width="340" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="940.0" y="1032.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblcontactusquery</text>
+<text x="780" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="1100" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="770" y1="1066" x2="1110" y2="1066" stroke="#dddddd" stroke-width="0.6"/>
+<text x="780" y="1081.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">name</text>
+<line x1="770" y1="1088" x2="1110" y2="1088" stroke="#dddddd" stroke-width="0.6"/>
+<text x="780" y="1103.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">EmailId</text>
+<line x1="770" y1="1110" x2="1110" y2="1110" stroke="#dddddd" stroke-width="0.6"/>
+<text x="780" y="1125.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">ContactNumber</text>
+<line x1="770" y1="1132" x2="1110" y2="1132" stroke="#dddddd" stroke-width="0.6"/>
+<text x="780" y="1147.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">Message</text>
+<line x1="770" y1="1154" x2="1110" y2="1154" stroke="#dddddd" stroke-width="0.6"/>
+<text x="780" y="1169.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">status</text>
+<rect x="1140" y="1010" width="320" height="100" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="1140" y="1010" width="320" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="1300.0" y="1032.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblsubscribers</text>
+<text x="1150" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="1450" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="1140" y1="1066" x2="1460" y2="1066" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1150" y="1081.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">SubscriberEmail</text>
+<line x1="1140" y1="1088" x2="1460" y2="1088" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1150" y="1103.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">PostingDate</text>
+<rect x="1490" y="1010" width="320" height="122" rx="0" fill="#ffffff" stroke="#333333" stroke-width="1.5"/>
+<rect x="1490" y="1010" width="320" height="34" rx="0" fill="#1d3a66" stroke="#333333" stroke-width="1.5"/>
+<text x="1650.0" y="1032.0" font-family="Calibri, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#ffffff" text-anchor="middle">tblpages</text>
+<text x="1500" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1d3a66" text-anchor="start">id</text>
+<text x="1800" y="1059.5" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1d3a66" text-anchor="end">PK</text>
+<line x1="1490" y1="1066" x2="1810" y2="1066" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1500" y="1081.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">PageName</text>
+<line x1="1490" y1="1088" x2="1810" y2="1088" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1500" y="1103.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">type</text>
+<line x1="1490" y1="1110" x2="1810" y2="1110" stroke="#dddddd" stroke-width="0.6"/>
+<text x="1500" y="1125.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#222222" text-anchor="start">detail</text>
+<text x="950.0" y="1470" font-family="Calibri, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Figure 3.5: Database Schema (ER) Design — database “carrental”</text>
+</svg>

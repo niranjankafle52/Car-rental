@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="760" viewBox="0 0 1500 760">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#1a1a1a"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1500" height="760" fill="#ffffff"/>
+<text x="210.0" y="40" font-family="Calibri, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Task</text>
+<text x="910.0" y="40" font-family="Calibri, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Project Timeline (Weeks)</text>
+<line x1="420.0" y1="80" x2="420.0" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="457.6923076923077" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W1</text>
+<line x1="495.38461538461536" y1="80" x2="495.38461538461536" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="533.0769230769231" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W2</text>
+<line x1="570.7692307692307" y1="80" x2="570.7692307692307" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="608.4615384615385" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W3</text>
+<line x1="646.1538461538462" y1="80" x2="646.1538461538462" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="683.8461538461539" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W4</text>
+<line x1="721.5384615384615" y1="80" x2="721.5384615384615" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="759.2307692307693" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W5</text>
+<line x1="796.9230769230769" y1="80" x2="796.9230769230769" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="834.6153846153846" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W6</text>
+<line x1="872.3076923076924" y1="80" x2="872.3076923076924" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="910.0000000000001" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W7</text>
+<line x1="947.6923076923077" y1="80" x2="947.6923076923077" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="985.3846153846155" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W8</text>
+<line x1="1023.0769230769231" y1="80" x2="1023.0769230769231" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1060.7692307692307" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W9</text>
+<line x1="1098.4615384615386" y1="80" x2="1098.4615384615386" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1136.1538461538462" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W10</text>
+<line x1="1173.8461538461538" y1="80" x2="1173.8461538461538" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1211.5384615384614" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W11</text>
+<line x1="1249.2307692307693" y1="80" x2="1249.2307692307693" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1286.923076923077" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W12</text>
+<line x1="1324.6153846153848" y1="80" x2="1324.6153846153848" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<text x="1362.3076923076924" y="72" font-family="Calibri, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#555555" text-anchor="middle">W13</text>
+<line x1="1400.0" y1="80" x2="1400.0" y2="650" stroke="#e2e2e2" stroke-width="1"/>
+<line x1="410" y1="90" x2="1400" y2="90" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="122.0" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">Requirement Gathering &amp; Study</text>
+<line x1="410" y1="146" x2="1400" y2="146" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="178.0" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">System Analysis &amp; DB Design</text>
+<line x1="410" y1="202" x2="1400" y2="202" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="234.0" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">UI/UX Design &amp; Prototyping</text>
+<line x1="410" y1="258" x2="1400" y2="258" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="282.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">Core Module Development</text>
+<text x="400" y="297.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">(Auth, Vehicles, Booking, Admin)</text>
+<line x1="410" y1="314" x2="1400" y2="314" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="346.0" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">Greedy Algorithm — Smart Car Finder</text>
+<line x1="410" y1="370" x2="1400" y2="370" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="394.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">Environment Setup</text>
+<text x="400" y="409.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">(Linux, MariaDB migration)</text>
+<line x1="410" y1="426" x2="1400" y2="426" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="450.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">UI Redesign</text>
+<text x="400" y="465.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">(modern theme &amp; animation)</text>
+<line x1="410" y1="482" x2="1400" y2="482" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="506.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">AI Chatbot Integration</text>
+<text x="400" y="521.5" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">(OpenRouter, tool-calling)</text>
+<line x1="410" y1="538" x2="1400" y2="538" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="570.0" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">Testing &amp; Bug Fixing</text>
+<line x1="410" y1="594" x2="1400" y2="594" stroke="#eeeeee" stroke-width="1"/>
+<text x="400" y="626.0" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1a1a1a" text-anchor="end">Documentation &amp; Report Writing</text>
+<rect x="423.0" y="102" width="69.38461538461539" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="498.38461538461536" y="158" width="144.76923076923077" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="573.7692307692307" y="214" width="144.76923076923077" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="649.1538461538462" y="270" width="295.53846153846155" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="875.3076923076924" y="326" width="144.76923076923077" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="950.6923076923077" y="382" width="69.38461538461539" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="1026.076923076923" y="438" width="144.76923076923077" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="1101.4615384615386" y="494" width="144.76923076923077" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="1176.8461538461538" y="550" width="144.76923076923077" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<rect x="1252.2307692307693" y="606" width="144.76923076923077" height="32" rx="5" fill="#e8a33d" stroke="#8a5a1e" stroke-width="1.2"/>
+<line x1="410" y1="650" x2="1400" y2="650" stroke="#cccccc" stroke-width="1.2"/>
+<line x1="410" y1="80" x2="410" y2="650" stroke="#cccccc" stroke-width="1.2"/>
+<text x="750.0" y="740" font-family="Calibri, Arial, sans-serif" font-size="14.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Figure 1.1: Project Development Timeline (Gantt Chart)</text>
+</svg>

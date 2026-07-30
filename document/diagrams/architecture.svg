@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1200" viewBox="0 0 1500 1200">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#1a1a1a"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1500" height="1200" fill="#ffffff"/>
+<rect x="60" y="40" width="1380" height="210" rx="8" fill="#fef7ec" stroke="#555555" stroke-width="1.4"/>
+<text x="90" y="70" font-family="Calibri, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#222222" text-anchor="start">Presentation / Client Layer</text>
+<rect x="150.0" y="95.0" width="380" height="110" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="340" y="137.66666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Web Browser (Desktop / Mobile)</text>
+<text x="340" y="154.16666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">HTML5, CSS3, Vanilla JS</text>
+<text x="340" y="170.66666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Bootstrap 3, jQuery, Owl/Slick Carousel</text>
+<rect x="870.0" y="95.0" width="380" height="110" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="1060" y="137.66666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Redesigned UI Layer</text>
+<text x="1060" y="154.16666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">assets/css/modern-theme.css</text>
+<text x="1060" y="170.66666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Scroll-reveal &amp; chatbot widget JS</text>
+<polyline points="700,150 860,150" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<polyline points="340,250 340,320" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="306.62" y="275.8" width="186.76" height="17.25" fill="#ffffff"/>
+<text x="400" y="288.45" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#333333" text-anchor="middle">HTTPS (localhost dev server)</text>
+<rect x="60" y="320" width="1380" height="330" rx="8" fill="#eef3fb" stroke="#555555" stroke-width="1.4"/>
+<text x="90" y="350" font-family="Calibri, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#222222" text-anchor="start">Web Server &amp; Application Logic Layer  (PHP 8.5, project root as document root)</text>
+<rect x="80.0" y="355.0" width="280" height="90" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="220" y="387.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Page Controllers</text>
+<text x="220" y="404.1666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">index.php, car-listing.php,</text>
+<text x="220" y="420.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">vehical-details.php, search.php ...</text>
+<rect x="400.0" y="355.0" width="280" height="90" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="540" y="387.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Session / Auth</text>
+<text x="540" y="404.1666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">$_SESSION login state,</text>
+<text x="540" y="420.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">login.php, registration.php</text>
+<rect x="720.0" y="355.0" width="280" height="90" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="860" y="387.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Booking Engine</text>
+<text x="860" y="404.1666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">reserve/booking logic,</text>
+<text x="860" y="420.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">date-overlap validation</text>
+<rect x="1050.0" y="355.0" width="260" height="90" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="1180" y="387.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Smart Car Finder</text>
+<text x="1180" y="404.1666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">CarRentalGreedyAlgorithm</text>
+<text x="1180" y="420.6666666666667" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">(weighted greedy scoring)</text>
+<rect x="420.0" y="520.0" width="560" height="80" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="700" y="547.6666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">AI Chatbot Layer  —  chatbot-api.php</text>
+<text x="700" y="564.1666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Tool-calling loop + chatbot_tools.php  (check_login_status, search_cars,</text>
+<text x="700" y="580.6666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">get_car_details, create_booking, list_my_bookings — DB access only, server-side)</text>
+<polyline points="220,445 220,520" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<polyline points="540,445 540,520" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<polyline points="860,445 860,520" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<polyline points="1180,445 1180,520" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="60" y="700" width="1380" height="190" rx="8" fill="#eef8f0" stroke="#555555" stroke-width="1.4"/>
+<text x="90" y="730" font-family="Calibri, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#222222" text-anchor="start">Data Layer</text>
+<rect x="180.0" y="750.0" width="500" height="100" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="430" y="787.6666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">MariaDB / MySQL — database "carrental"</text>
+<text x="430" y="804.1666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">tblusers, tblvehicles, tblbrands, tblbooking,</text>
+<text x="430" y="820.6666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">tbltestimonial, admin, tblcontactusquery, ...</text>
+<rect x="930.0" y="750.0" width="300" height="100" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="1080" y="787.6666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">Local file storage</text>
+<text x="1080" y="804.1666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">admin/img/vehicleimages/</text>
+<text x="1080" y="820.6666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">vehicle photos, uploads</text>
+<polyline points="430,605 430,750" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<polyline points="1080,605 1080,750" fill="none" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="60" y="940" width="1380" height="160" rx="8" fill="#fdeeee" stroke="#555555" stroke-width="1.4"/>
+<text x="90" y="970" font-family="Calibri, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#222222" text-anchor="start">External Service</text>
+<rect x="420.0" y="975.0" width="560" height="90" rx="6" fill="#ffffff" stroke="#333333" stroke-width="1.4"/>
+<text x="700" y="1007.6666666666666" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">OpenRouter AI API  (model: openrouter/pareto-code)</text>
+<text x="700" y="1024.1666666666665" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">HTTPS REST — /chat/completions with tools + tool_choice</text>
+<text x="700" y="1040.6666666666665" font-family="Calibri, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="middle">API key stored server-side only in includes/chatbot_config.php</text>
+<polyline points="700,640 700,975" fill="none" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="743.325" y="790.8" width="33.349999999999994" height="17.25" fill="#ffffff"/>
+<text x="760" y="803.45" font-family="Calibri, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#333333" text-anchor="middle">HTTPS</text>
+<text x="750.0" y="1140" font-family="Calibri, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1a1a1a" text-anchor="middle">Figure 3.4: System Architecture Design</text>
+</svg>

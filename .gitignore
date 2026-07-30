@@ -83,6 +83,9 @@ pnpm-debug.log*
 dist/
 build/
 
+# Regeneratable report image cache
+document/_render_cache/
+
 # Miscellaneous
 *.bak
 *.tmp
